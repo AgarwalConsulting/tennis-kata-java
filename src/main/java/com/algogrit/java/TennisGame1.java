@@ -1,6 +1,9 @@
 package com.algogrit.java;
 
 public class TennisGame1 implements TennisGame {
+    private static Integer WINNABLE_POINT = 3;
+    private static Integer ADVANTAGE_POINT = 1;
+
     private Player player1;
     private Player player2;
 
@@ -10,7 +13,7 @@ public class TennisGame1 implements TennisGame {
     }
 
     private Boolean isEndGame() {
-        return player1.getScore() > 3 || player2.getScore() > 3;
+        return player1.getScore() > WINNABLE_POINT || player2.getScore() > WINNABLE_POINT;
     }
 
     private Boolean isScoreEven() {
@@ -18,7 +21,7 @@ public class TennisGame1 implements TennisGame {
     }
 
     private Boolean isGamePoint() {
-        return isEndGame() && this.getScoreDifference() == 1;
+        return isEndGame() && this.getScoreDifference() == ADVANTAGE_POINT;
     }
 
     private Integer getScoreDifference() {
@@ -34,8 +37,8 @@ public class TennisGame1 implements TennisGame {
     }
 
     private String getEvenScore() {
-        if(player1.getScore() < 3) {
-            return player1.getEnglishScore() + "-" + "All";
+        if(player1.getScore() < WINNABLE_POINT) {
+            return player1.getEnglishScore() + "-All";
         }
 
         return "Deuce";

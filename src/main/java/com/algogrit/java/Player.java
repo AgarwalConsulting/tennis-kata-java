@@ -26,10 +26,6 @@ public class Player {
     }
 
     public String getEnglishScore() {
-        if (score < scoreEnglishNames.size()) {
-            return scoreEnglishNames.get(score);
-        }
-
-        return null;
+        return scoreEnglishNames.get(score);
     }
 }
