@@ -17,6 +17,10 @@ public class Player {
         return name;
     }
 
+    public Boolean isName(String name) {
+        return this.name.equals(name);
+    }
+
     public Integer getScore() {
         return score;
     }
