@@ -1,6 +1,7 @@
+package com.algogrit.java;
 
 public class TennisGame1 implements TennisGame {
-    
+
     private int m_score1 = 0;
     private int m_score2 = 0;
     private String player1Name;
@@ -37,7 +38,7 @@ public class TennisGame1 implements TennisGame {
                 default:
                         score = "Deuce";
                     break;
-                
+
             }
         }
         else if (m_score1>=4 || m_score2>=4)
