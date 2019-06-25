@@ -4,7 +4,7 @@ Imagine you work for a consultancy company, and one of your colleagues has been 
 
 There are three versions of this refactoring kata, each with their own design smells and challenges. I suggest you start with the first one, with the class "TennisGame1". The test suite provided is fairly comprehensive, and fast to run. You should not need to change the tests, only run them often as you refactor.
 
-If you like this Kata, you may be interested in my book, ["The Coding Dojo Handbook"](https://leanpub.com/codingdojohandbook)
+If you like this Kata, you may be interested in Emily Bache's book, ["The Coding Dojo Handbook"](https://leanpub.com/codingdojohandbook)
 
 ## Tennis Kata
 
@@ -34,8 +34,4 @@ You need only report the score for the current game. Sets and Matches are out of
 
 As an alternative to downloading the code, click one of the links below to create a new cyber-dojo to work in, then press "enter" to get going coding.
 
-- [Python](http://cyber-dojo.org/forker/fork/435E5C1C88?avatar=moose&tag=5)
-- [Ruby](http://cyber-dojo.org/forker/fork/3367E4B0E9?avatar=raccoon&tag=4)
 - [Java](http://cyber-dojo.org/forker/fork/4D363A34A7?avatar=vulture&tag=3)
-- [C++](http://cyber-dojo.org/forker/fork/A06DCDA217?avatar=wolf&tag=5)
-- [C#](http://cyber-dojo.org/forker/fork/672E047F5D?avatar=buffalo&tag=8)
