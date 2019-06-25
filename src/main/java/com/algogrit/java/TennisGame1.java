@@ -21,11 +21,13 @@ public class TennisGame1 implements TennisGame {
     }
 
     private Boolean isGamePoint() {
-        return isEndGame() && this.getScoreDifference() == ADVANTAGE_POINT;
+        return isEndGame() && hasAdvantagedPlayer();
     }
 
-    private Integer getScoreDifference() {
-        return Math.abs(player1.getScore() - player2.getScore());
+    private Boolean hasAdvantagedPlayer() {
+        Integer diff = Math.abs(player1.getScore() - player2.getScore());
+
+        return diff == ADVANTAGE_POINT;
     }
 
     private Player getAdvantagedPlayer() {
@@ -45,12 +47,12 @@ public class TennisGame1 implements TennisGame {
     }
 
     private String getEndGameScore() {
-        Player advantagedPlayer = this.getAdvantagedPlayer();
+        Player advantagedPlayer = getAdvantagedPlayer();
         if (isGamePoint()) {
             return "Advantage " + advantagedPlayer.getName();
-        } else {
-            return "Win for " + advantagedPlayer.getName();
         }
+
+        return "Win for " + advantagedPlayer.getName();
     }
 
     private String getNormalScore() {
