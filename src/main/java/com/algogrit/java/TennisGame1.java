@@ -12,22 +12,22 @@ public class TennisGame1 implements TennisGame {
         this.player2 = new Player(player2Name);
     }
 
-    private Boolean isEndGame() {
-        return player1.getScore() > WINNABLE_POINT || player2.getScore() > WINNABLE_POINT;
-    }
-
     private Boolean isScoreEven() {
         return player1.getScore() == player2.getScore();
     }
 
-    private Boolean isGamePoint() {
-        return isEndGame() && hasAdvantagedPlayer();
+    private Boolean isEndGame() {
+        return player1.getScore() > WINNABLE_POINT || player2.getScore() > WINNABLE_POINT;
     }
 
     private Boolean hasAdvantagedPlayer() {
         Integer diff = Math.abs(player1.getScore() - player2.getScore());
 
         return diff == ADVANTAGE_POINT;
+    }
+
+    private Boolean isGamePoint() {
+        return isEndGame() && hasAdvantagedPlayer();
     }
 
     private Player getAdvantagedPlayer() {
